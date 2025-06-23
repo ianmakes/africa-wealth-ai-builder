@@ -75,7 +75,7 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+      <section className="relative py-32 bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
@@ -86,8 +86,8 @@ const Contact = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-red-800 mx-auto mb-8"></div>
+          <p className="text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto leading-relaxed">
             Ready to start your wealth optimization journey? Get in touch with our expert team today.
           </p>
         </div>
@@ -97,8 +97,8 @@ const Contact = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-900 mb-6">Get in Touch</h2>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
+            <h2 className="text-4xl font-bold text-black mb-6">Get in Touch</h2>
+            <div className="w-24 h-1 bg-red-800 mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're here to help you navigate Africa's opportunities. Choose your preferred way to reach us.
             </p>
@@ -106,12 +106,12 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-t-4 border-t-blue-500">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-t-4 border-t-red-800">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <method.icon className="w-8 h-8 text-blue-900" />
+                  <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <method.icon className="w-8 h-8 text-black" />
                   </div>
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">{method.title}</h3>
+                  <h3 className="text-xl font-bold text-black mb-2">{method.title}</h3>
                   <p className="text-gray-600 mb-4">{method.description}</p>
                   <div className="space-y-1">
                     {method.details.map((detail, detailIndex) => (
@@ -133,7 +133,7 @@ const Contact = () => {
             <div>
               <Card className="shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-blue-900">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-black">Send Us a Message</CardTitle>
                   <CardDescription>
                     Fill out the form below and we'll get back to you within 24 hours.
                   </CardDescription>
@@ -150,7 +150,7 @@ const Contact = () => {
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
                           placeholder="Your full name"
-                          className="border-gray-300 focus:border-blue-500"
+                          className="border-gray-300 focus:border-red-800"
                         />
                       </div>
                       <div>
@@ -163,7 +163,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
                           placeholder="your.email@company.com"
-                          className="border-gray-300 focus:border-blue-500"
+                          className="border-gray-300 focus:border-red-800"
                         />
                       </div>
                     </div>
@@ -177,7 +177,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
                           placeholder="+254 xxx xxx xxx"
-                          className="border-gray-300 focus:border-blue-500"
+                          className="border-gray-300 focus:border-red-800"
                         />
                       </div>
                       <div>
@@ -188,7 +188,7 @@ const Contact = () => {
                           value={formData.company}
                           onChange={(e) => handleInputChange('company', e.target.value)}
                           placeholder="Your company name"
-                          className="border-gray-300 focus:border-blue-500"
+                          className="border-gray-300 focus:border-red-800"
                         />
                       </div>
                     </div>
@@ -198,7 +198,7 @@ const Contact = () => {
                         Inquiry Type *
                       </label>
                       <Select value={formData.inquiryType} onValueChange={(value) => handleInputChange('inquiryType', value)}>
-                        <SelectTrigger className="border-gray-300 focus:border-blue-500">
+                        <SelectTrigger className="border-gray-300 focus:border-red-800">
                           <SelectValue placeholder="Select inquiry type" />
                         </SelectTrigger>
                         <SelectContent>
@@ -222,14 +222,14 @@ const Contact = () => {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         placeholder="Please describe your inquiry in detail..."
-                        className="border-gray-300 focus:border-blue-500"
+                        className="border-gray-300 focus:border-red-800"
                       />
                     </div>
 
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3"
+                      className="w-full bg-black hover:bg-gray-800 text-white py-3"
                     >
                       Send Message
                     </Button>
@@ -242,8 +242,8 @@ const Contact = () => {
             <div className="space-y-8">
               <Card className="shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-blue-900 flex items-center">
-                    <MapPin className="w-6 h-6 mr-3 text-yellow-500" />
+                  <CardTitle className="text-2xl font-bold text-black flex items-center">
+                    <MapPin className="w-6 h-6 mr-3 text-red-800" />
                     Head Office - Nairobi
                   </CardTitle>
                 </CardHeader>
@@ -254,9 +254,9 @@ const Contact = () => {
                       backgroundImage: `url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')`
                     }}
                   >
-                    <div className="h-full bg-blue-900/80 rounded-lg flex items-center justify-center">
+                    <div className="h-full bg-black/80 rounded-lg flex items-center justify-center">
                       <div className="text-center text-white">
-                        <MapPin className="w-12 h-12 mx-auto mb-2 text-yellow-400" />
+                        <MapPin className="w-12 h-12 mx-auto mb-2 text-red-800" />
                         <p className="font-bold">ABSA Towers</p>
                         <p>15th Floor, Loita Street</p>
                       </div>
@@ -265,18 +265,18 @@ const Contact = () => {
                   
                   <div className="space-y-4">
                     <div className="flex items-start space-x-4">
-                      <Phone className="w-6 h-6 text-blue-900 mt-1 flex-shrink-0" />
+                      <Phone className="w-6 h-6 text-black mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-blue-900">Phone Numbers</p>
+                        <p className="font-semibold text-black">Phone Numbers</p>
                         <p className="text-gray-700">+254 755 450450</p>
                         <p className="text-gray-700">+254 741 991 735</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <Mail className="w-6 h-6 text-blue-900 mt-1 flex-shrink-0" />
+                      <Mail className="w-6 h-6 text-black mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-blue-900">Email</p>
+                        <p className="font-semibold text-black">Email</p>
                         <p className="text-gray-700">admin@lanxafrica.co.ke</p>
                       </div>
                     </div>
@@ -286,17 +286,17 @@ const Contact = () => {
 
               {/* Quick Contact Options */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-blue-900">Specialized Services</h3>
+                <h3 className="text-xl font-bold text-black">Specialized Services</h3>
                 
                 <Card className="hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <Globe className="w-8 h-8 text-blue-900" />
+                      <Globe className="w-8 h-8 text-black" />
                       <div className="flex-1">
-                        <h4 className="font-semibold text-blue-900 mb-1">Conference Inquiries</h4>
+                        <h4 className="font-semibold text-black mb-1">Conference Inquiries</h4>
                         <p className="text-gray-600 text-sm">Interested in hosting or attending our conferences?</p>
                       </div>
-                      <Button size="sm" className="bg-yellow-500 hover:bg-yellow-400 text-blue-900">
+                      <Button size="sm" className="bg-red-800 hover:bg-red-700 text-white">
                         Learn More
                       </Button>
                     </div>
@@ -306,12 +306,12 @@ const Contact = () => {
                 <Card className="hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <Users className="w-8 h-8 text-blue-900" />
+                      <Users className="w-8 h-8 text-black" />
                       <div className="flex-1">
-                        <h4 className="font-semibold text-blue-900 mb-1">Investment Inquiries</h4>
+                        <h4 className="font-semibold text-black mb-1">Investment Inquiries</h4>
                         <p className="text-gray-600 text-sm">Ready to explore investment opportunities?</p>
                       </div>
-                      <Button size="sm" className="bg-yellow-500 hover:bg-yellow-400 text-blue-900">
+                      <Button size="sm" className="bg-red-800 hover:bg-red-700 text-white">
                         Get Started
                       </Button>
                     </div>
@@ -334,12 +334,12 @@ const Contact = () => {
                   backgroundImage: `url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')`
                 }}
               >
-                <div className="h-full bg-blue-900/60 rounded-lg flex items-center justify-center">
+                <div className="h-full bg-black/60 rounded-lg flex items-center justify-center">
                   <div className="text-center text-white">
-                    <MapPin className="w-16 h-16 mx-auto mb-4 text-yellow-400" />
+                    <MapPin className="w-16 h-16 mx-auto mb-4 text-red-800" />
                     <h3 className="text-2xl font-bold mb-2">Find Us in Nairobi</h3>
-                    <p className="text-blue-100">15th Floor, ABSA Towers, Loita Street</p>
-                    <p className="text-blue-100">Interactive map integration coming soon</p>
+                    <p className="text-gray-100">15th Floor, ABSA Towers, Loita Street</p>
+                    <p className="text-gray-100">Interactive map integration coming soon</p>
                   </div>
                 </div>
               </div>

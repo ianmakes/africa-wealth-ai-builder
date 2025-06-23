@@ -43,14 +43,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-blue-900">
+    <section id="contact" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Contact Us
           </h2>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-red-800 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
             Ready to start your wealth optimization journey? Get in touch with our expert team today.
           </p>
         </div>
@@ -60,33 +60,33 @@ const Contact = () => {
           <div className="space-y-8">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-yellow-400 mb-4">
+                <CardTitle className="text-2xl font-bold text-red-800 mb-4">
                   Head Office - Nairobi
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <MapPin className="w-6 h-6 text-red-800 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Address</p>
-                    <p className="text-blue-100">15th Floor, ABSA Towers<br />Loita Street, Nairobi</p>
+                    <p className="text-gray-100">15th Floor, ABSA Towers<br />Loita Street, Nairobi</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <Phone className="w-6 h-6 text-red-800 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Phone Numbers</p>
-                    <p className="text-blue-100">+254 755 450450</p>
-                    <p className="text-blue-100">+254 741 991 735</p>
+                    <p className="text-gray-100">+254 755 450450</p>
+                    <p className="text-gray-100">+254 741 991 735</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Calendar className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <Calendar className="w-6 h-6 text-red-800 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-blue-100">admin@lanxafrica.co.ke</p>
+                    <p className="text-gray-100">admin@lanxafrica.co.ke</p>
                   </div>
                 </div>
               </CardContent>
@@ -94,16 +94,16 @@ const Contact = () => {
 
             {/* Quick Contact Options */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-yellow-400">Quick Contact Options</h3>
+              <h3 className="text-xl font-bold text-red-800">Quick Contact Options</h3>
               
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-4">
                   <h4 className="font-semibold text-white mb-2">Conference Inquiries</h4>
-                  <p className="text-blue-100 text-sm mb-3">Interested in hosting or attending our conferences?</p>
+                  <p className="text-gray-100 text-sm mb-3">Interested in hosting or attending our conferences?</p>
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900"
+                    className="border-red-800 text-red-800 hover:bg-red-800 hover:text-white"
                   >
                     Conference Info
                   </Button>
@@ -113,11 +113,11 @@ const Contact = () => {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-4">
                   <h4 className="font-semibold text-white mb-2">Investment Inquiries</h4>
-                  <p className="text-blue-100 text-sm mb-3">Ready to explore investment opportunities?</p>
+                  <p className="text-gray-100 text-sm mb-3">Ready to explore investment opportunities?</p>
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900"
+                    className="border-red-800 text-red-800 hover:bg-red-800 hover:text-white"
                   >
                     Investment Advisory
                   </Button>
@@ -129,7 +129,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="bg-white">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-blue-900">Send Us a Message</CardTitle>
+              <CardTitle className="text-2xl font-bold text-black">Send Us a Message</CardTitle>
               <CardDescription>
                 Fill out the form below and we'll get back to you within 24 hours.
               </CardDescription>
@@ -220,7 +220,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-blue-900 hover:bg-blue-800 text-white"
+                  className="w-full bg-black hover:bg-gray-800 text-white"
                 >
                   Send Message
                 </Button>
@@ -235,10 +235,10 @@ const Contact = () => {
             <CardContent className="p-8">
               <div className="bg-white/20 h-64 rounded-lg flex items-center justify-center">
                 <div className="text-center text-white">
-                  <MapPin className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
+                  <MapPin className="w-12 h-12 mx-auto mb-4 text-red-800" />
                   <h3 className="text-xl font-bold mb-2">ABSA Towers, Nairobi</h3>
-                  <p className="text-blue-100">15th Floor, Loita Street</p>
-                  <p className="text-blue-100">Interactive map coming soon</p>
+                  <p className="text-gray-100">15th Floor, Loita Street</p>
+                  <p className="text-gray-100">Interactive map coming soon</p>
                 </div>
               </div>
             </CardContent>
