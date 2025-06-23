@@ -1,16 +1,14 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
+  const isActive = (path: string) => {
+    return location.pathname === path;
   };
 
   return (
@@ -18,53 +16,72 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-blue-900">
+            <Link to="/" className="text-2xl font-bold text-blue-900 hover:text-blue-800 transition-colors">
               Lan-x <span className="text-yellow-600">Africa</span>
-            </div>
+            </Link>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium transition-colors"
+              <Link
+                to="/"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive('/') 
+                    ? 'text-blue-900 border-b-2 border-yellow-500' 
+                    : 'text-gray-700 hover:text-blue-900'
+                }`}
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium transition-colors"
+              </Link>
+              <Link
+                to="/about"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive('/about') 
+                    ? 'text-blue-900 border-b-2 border-yellow-500' 
+                    : 'text-gray-700 hover:text-blue-900'
+                }`}
               >
                 About Us
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium transition-colors"
+              </Link>
+              <Link
+                to="/services"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive('/services') 
+                    ? 'text-blue-900 border-b-2 border-yellow-500' 
+                    : 'text-gray-700 hover:text-blue-900'
+                }`}
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection('invest')}
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium transition-colors"
+              </Link>
+              <Link
+                to="/invest-in-africa"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive('/invest-in-africa') 
+                    ? 'text-blue-900 border-b-2 border-yellow-500' 
+                    : 'text-gray-700 hover:text-blue-900'
+                }`}
               >
                 Invest in Africa
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium transition-colors"
+              </Link>
+              <Link
+                to="/contact"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive('/contact') 
+                    ? 'text-blue-900 border-b-2 border-yellow-500' 
+                    : 'text-gray-700 hover:text-blue-900'
+                }`}
               >
                 Contact
-              </button>
+              </Link>
             </div>
           </div>
 
           <div className="hidden md:block">
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-blue-900 hover:bg-blue-800 text-white"
-            >
-              Talk to Us
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-blue-900 hover:bg-blue-800 text-white">
+                Talk to Us
+              </Button>
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -82,43 +99,50 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <button
-                onClick={() => scrollToSection('hero')}
+              <Link
+                to="/"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900 w-full text-left"
+                onClick={() => setIsOpen(false)}
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
+              </Link>
+              <Link
+                to="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900 w-full text-left"
+                onClick={() => setIsOpen(false)}
               >
                 About Us
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
+              </Link>
+              <Link
+                to="/services"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900 w-full text-left"
+                onClick={() => setIsOpen(false)}
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection('invest')}
+              </Link>
+              <Link
+                to="/invest-in-africa"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900 w-full text-left"
+                onClick={() => setIsOpen(false)}
               >
                 Invest in Africa
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
+              </Link>
+              <Link
+                to="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900 w-full text-left"
+                onClick={() => setIsOpen(false)}
               >
                 Contact
-              </button>
+              </Link>
               <div className="px-3 py-2">
-                <Button 
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-blue-900 hover:bg-blue-800 text-white w-full"
-                >
-                  Talk to Us
-                </Button>
+                <Link to="/contact">
+                  <Button 
+                    className="bg-blue-900 hover:bg-blue-800 text-white w-full"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Talk to Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
